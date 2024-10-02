@@ -1,0 +1,26 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hmunoz-g <hmunoz-g@student.42barcelon      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/09/10 10:10:17 by hmunoz-g          #+#    #+#              #
+#    Updated: 2024/09/10 10:21:34 by hmunoz-g         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CFLAGS = -Wall -Wextra -Werror
+SOURCES = main.c
+DEST = ft_display_file
+
+all: compile
+
+compile:
+	gcc $(CFLAGS) -o $(DEST) $(SOURCES)
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(DEST)
